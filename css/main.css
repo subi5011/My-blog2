@@ -1,0 +1,384 @@
+html,body{
+    margin: 0;
+    padding: 0;
+}
+/*专门清除浮动的类*/
+.clearfix:after{
+    content: '';
+    display: block;
+    clear: both;
+    visibility: hidden;
+}
+
+h1{
+    padding:12px;
+    border-top: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+}
+
+.article h1{
+    border: none;
+}
+
+h2{
+    font-size: 20px;
+}
+h3{
+    font-size: 14px;
+}
+p{
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.hr{
+    width:100px;
+    height: 2px;
+    margin:20px auto;
+}
+ul{
+    margin: 0;
+}
+
+/*头部样式*/
+
+.main-wrapper{
+    background: #444444 url("../img/banner.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    /*避免屏幕缩小时出现空白区域*/
+    overflow: hidden;
+}
+.article.main-wrapper{
+    background: #444444 url("../img/article-page-bg.jpg");
+}
+
+header{
+    background: rgba(0,0,0,0.3);
+}
+
+nav {
+    height: 50px;
+    line-height: 50px;
+}
+nav ul{
+    list-style: none;
+    margin: 0;
+    float: right;
+}
+nav ul li, nav .logo{
+    display: inline-block;
+    line-height: 50px;
+}
+nav ul li a{
+    line-height: 50px;
+    text-decoration: none;
+    height:inherit;
+    margin-right: 40px;
+    padding-bottom: 5px;
+    color: #eeeeee;
+}
+.active{
+    border-bottom: 3px solid #ffffff;
+}
+nav ul li a:hover{
+    border-bottom: 3px solid #ffffff;
+}
+#banner{
+    height: 700px;
+}
+
+.article #banner{
+    height: 300px;
+}
+#banner .inner{
+    max-width: 300px;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+    top: 160px;
+    color: #eeeeee;
+}
+
+.article #banner .inner{
+    top: 30px;
+}
+
+button{
+    border: none;
+    background: #333333;
+    color: #eeeeee;
+    padding: 10px;
+}
+#banner button{
+    padding: 14px 60px;
+    cursor: pointer;
+    transition: all 0.5s ease;/*规定过度效果。button背景色改变*/
+}
+#banner button:hover{
+    background: #675353;
+}
+#banner .inner .more{
+    margin-top: 200px;
+}
+.more a:hover{
+    text-decoration: underline;
+}
+.sub-heading{
+    line-height: 30px;
+    margin: 30px 0;
+}
+.logo{
+    font-size: 20px;
+    font-weight:700;
+    letter-spacing:1px;
+    margin-left: 20px;
+}
+.logo a,h1,#banner{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/*主题样式*/
+.green-section{
+    background-color: rgba(8,157,176,0.8);
+    color: #ffffff;
+    text-align: center;
+    padding: 100px 0;
+}
+.green-section .wrapper{
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.green-section .hr{
+    background: #078494;
+    width: 60%;
+}
+.sub-heading{
+    font-size: 18px;
+}
+.green-section .icon-group .icon{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    /*border:1px solid #0d6f7c;*/
+    background: #0d6f7c;
+    transform:rotate(45deg);/*旋转45度*/
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    margin: 20px 40px;
+}
+.icon-group .icon a{
+    display: inline-block;
+    width: 140px;
+    margin-top: 38px;
+    margin-left: -22px;
+    text-decoration: none;
+    color: #ffffff;
+    transform:rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+}
+.icon-group .icon a:hover{
+    color: #030527;
+}
+.icon-group{
+    margin: 60px;
+}
+.gray-section{
+    background-color: rgba(0,0,0,0.9);
+    color: #ffffff;
+    font-size: 0;/*让article-preview 的font-size等于0这样可以让article-preview之间的空隙去掉*/
+}
+.gray-section .img-section{
+    width: 45%;
+}
+.img-section img{
+    width: 100%;
+}
+.gray-section .text-section{
+    width: 55%;
+}
+.text-section p a{
+    color: #ffffff;
+    font-size: 14px;
+    text-decoration: none;
+}
+/*奇偶选择器*/
+.article-preview:nth-child(odd){
+    background-color:rgba(255,255,255,0.05);/*加白色的蒙蔽*/
+}
+.article-preview > div{ /*在article-preview 下的所有的div*/
+    float: left;
+}
+.text-section{
+    position: relative;
+    top: 68px;
+    left: 50px;
+}
+.text-section h2{
+    margin-bottom: 20px;
+}
+.text-section .sub-heading{
+    font-size: 22px;
+    margin-top: 0;
+}
+.text-section p{
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+.text-section >*{   /*text-section 下的所有的直系的子元素宽度为90%*/
+    max-width:90% ;
+}
+/*主题样式二*/
+.purple-section{
+    background-color: rgba(33,28,26,0.44);
+    color: #ffffff;
+    padding: 80px;
+}
+.purple-section .heading-wrapper{
+    text-align: center;
+}
+.purple-section hr{
+    background: #373259;
+    width: 60%;
+}
+.card-group:after{
+    content: '';
+    clear: both;
+    display: block;
+}
+.card{
+    float: left;
+    width: 50%;
+    min-height: 300px;
+    padding: 50px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    /*border:1px solid white;*/
+}
+.card:first-child{
+    background: rgba(0,0,0,0.4);
+}
+.card:nth-child(2){
+    background: rgba(0,0,0,0.2);
+}
+.card:nth-child(3){
+    background: rgba(0,0,0,0.2)
+}
+.card:nth-child(4){
+    background: rgba(0,0,0,0.4)
+}
+.card:nth-child(5){
+    background: rgba(0,0,0,0.4)
+}
+.card:nth-child(6){
+    background: rgba(0,0,0,0.2)
+}
+footer{
+    background-color: rgba(0,0,0,0.8);
+    color: #ffffff;
+    min-height: 100px;
+    text-align: center;
+
+}
+ul .share-group{
+    display: block;
+    width:1080px;
+    margin: 0 auto;
+    padding: 120px;
+}
+.share-group li{
+    display: inline-block;
+    padding: 25px 20px;
+}
+.share-group li a {
+  text-decoration: none;
+  color: #fff;
+}
+.share-group li a:hover {
+  text-decoration: underline;
+}
+.copy{
+    padding-bottom:30px;
+}
+.copy p {
+  font-size: 14px;
+}
+/*当侧菜单栏出现时整个页面被盖住（蒙蔽一层）突出侧菜单栏*/
+.mask{
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(0,0,0,0.3);
+}
+
+#sidebar{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    /*这个值可以让sidebar在窗口的右边存在但是看不到right: -300px;*/
+    /*这是css3的方法*/
+    -webkit-transform: translate(300px,0);/*translate(X,Y)的第一个值时X轴的值第二个时Y轴的值*/
+    -moz-transform: translate(300px,0);
+    -ms-transform: translate(300px,0);
+    -o-transform: translate(300px,0);
+    transform: translate(300px,0);
+    width: 300px;
+    background: #333333;
+    padding: 20px 0;
+    transition: all 0.5s;
+    /*transition: right 0.5s;/*当right初始值设置为负值时使用*//*出现时的过渡时间0.5s*/
+}
+/*把一些样式去掉*/
+#sidebar ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+#sidebar ul li a{
+    padding: 10px 30px;
+    text-decoration: none;
+    display: inline-block;
+    color: #ffffff;
+    width: 100%;
+}
+#sidebar ul li a:hover{
+    background: #444444;
+}
+
+.back-to-top{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    border: 1px solid #888888;
+}
+
+.article .content{
+    background: #efefef;
+}
+
+.content-wrapper{
+    width: 1080px;
+    margin: 0 auto;
+}
+article{
+    line-height:2;
+    padding: 10px 0;
+}
+
+.article-info{
+    font-size: 14px;
+    color: #888888;
+    padding: 15px 0;
+}
